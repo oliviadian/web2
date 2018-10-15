@@ -21,5 +21,8 @@ Route::get('/halaman1', function () {
 Route::get('/halaman2', function () {
     return view('halaman2');
 });
+Route::get('/Mahasiswa', function () {
+    return view('Mahasiswa');
+});
 Route::get('halaman/tambah', 'web@tambah');
 Route::resource('halaman','web');

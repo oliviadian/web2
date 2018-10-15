@@ -45,6 +45,9 @@
             <li>
                 <a href="/halaman2">- Sidebar 2</a>
             </li>
+			<li>
+                <a href="/Mahasiswa">- Mahasiswa</a>
+            </li>
         </ul>
     </aside>
 
