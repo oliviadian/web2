@@ -9,6 +9,7 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
 */
 
 Route::get('/', function () {
@@ -21,8 +22,9 @@ Route::get('/halaman1', function () {
 Route::get('/halaman2', function () {
     return view('halaman2');
 });
-Route::get('/Mahasiswa', function () {
-    return view('Mahasiswa');
-});
+//Route::get('/Mahasiswa', function () {
+//    return view('Mahasiswa');
+//});
 Route::get('halaman/tambah', 'web@tambah');
 Route::resource('halaman','web');
+Route::resource('/mahasiswa', 'MahasiswaController');
