@@ -27,4 +27,7 @@ Route::get('/halaman2', function () {
 //});
 Route::get('halaman/tambah', 'web@tambah');
 Route::resource('halaman','web');
-Route::resource('/mahasiswa', 'MahasiswaController');
+Route::resource('mahasiswa', 'MahasiswaController');
+Route::resource('tambah', 'MahasiswaController');
+Route::resource('user', 'User');
+

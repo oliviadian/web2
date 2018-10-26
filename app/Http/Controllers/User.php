@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mahasiswa;
+use App\ModelUser;
 
-class MahasiswaController extends Controller
+class User extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        $data = Mahasiswa::all();
-		return view('mahasiswa', compact('data'));
+        $data = ModelUser::all();
+		return view('/user', compact('data'));
     }
 
     /**
@@ -25,7 +25,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        return view('mahasiswa_create');
+        //
     }
 
     /**
@@ -36,13 +36,7 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new ModelMahasiswa();
-		$data->nama = $request->nama;
-		$data->email = $request->email;
-		$data->nohp = $request->nohp;
-		$data->alamat = $request->alamat;
-		$data->save();
-		return redirect()->route('mahasiswa.index')->with('alert-success','Berhasil Menambahkan Data!');
+        //
     }
 
     /**

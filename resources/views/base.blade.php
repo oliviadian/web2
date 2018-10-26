@@ -40,13 +40,21 @@
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="/halaman1">- Sidebar 1</a>
+                <a href="/halaman1">Sidebar 1</a>
             </li>
             <li>
-                <a href="/halaman2">- Sidebar 2</a>
+                <a href="/halaman2">Sidebar 2</a>
             </li>
 			<li>
-                <a href="/mahasiswa">- Mahasiswa</a>
+                <a href="/mahasiswa">Mahasiswa</a>
+				<ul>
+					<li>
+					<a href="{{route('mahasiswa.create')}}">Tambah</a>
+					</li>
+				</ul>
+            </li>
+			<li>
+                <a href="/user">User</a>
             </li>
         </ul>
     </aside>
