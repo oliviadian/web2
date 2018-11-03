@@ -13,8 +13,8 @@ class CreateMahasiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('mahasiswas', function (Blueprint $table) {
-            $table->increments('nim'); //membuat kolom nim auto increments
+        Schema::create('mahasiswa', function (Blueprint $table) {
+            $table->increments('id'); //membuat kolom nim auto increments
 			$table->string('nama'); //membuat kolom nama
 			$table->string('email'); //membuat kolom email
 			$table->string('nohp'); //membuat kolom nohp
@@ -30,6 +30,6 @@ class CreateMahasiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mahasiswas');
+        Schema::dropIfExists('mahasiswa');
     }
 }

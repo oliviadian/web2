@@ -55,6 +55,11 @@
             </li>
 			<li>
                 <a href="/user">User</a>
+				<ul>
+					<li>
+					<a href="{{route('tambahuser.create')}}">Tambah</a>
+					</li>
+				</ul>
             </li>
         </ul>
     </aside>

@@ -36,7 +36,7 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new ModelMahasiswa();
+        $data = new Mahasiswa();
 		$data->nama = $request->nama;
 		$data->email = $request->email;
 		$data->nohp = $request->nohp;
@@ -64,7 +64,8 @@ class MahasiswaController extends Controller
      */
     public function edit($id)
     {
-        //
+       $data = Mahasiswa::where('id',$id)->get();
+	   return view('edit', compact('data'));
     }
 
     /**
@@ -76,7 +77,13 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Mahasiswa::where('id',$id)->first();
+		$data->nama = $request->nama;
+		$data->email = $request->email;
+		$data->nohp = $request->nohp;
+		$data->alamat = $request->alamat;
+		$data->save();
+		return redirect()->route('mahasiswa.index')->with('alert-success','Data berhasil diubah!');
     }
 
     /**
@@ -87,6 +94,8 @@ class MahasiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Mahasiswa::where('id', $id)->first();
+		$data->delete();
+		return redirect()->route('mahasiswa.index')->with('alert-success', 'Data berhasil dihapus!');
     }
 }

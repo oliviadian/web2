@@ -30,4 +30,6 @@ Route::resource('halaman','web');
 Route::resource('mahasiswa', 'MahasiswaController');
 Route::resource('tambah', 'MahasiswaController');
 Route::resource('user', 'User');
+Route::resource('tambahuser', 'User');
+Route::resource('edit', 'User');
 

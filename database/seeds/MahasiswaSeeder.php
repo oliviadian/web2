@@ -15,7 +15,7 @@ class MahasiswaSeeder extends Seeder
 		$limit = 10;
 		
 		for ($i = 0; $i< $limit; $i++){
-			DB::table('mahasiswas')->insert([
+			DB::table('mahasiswa')->insert([
 			'nama' => $faker->name,
 			'email' => $faker->unique()->email,//email update
 			'nohp' => $faker->phoneNumber,
